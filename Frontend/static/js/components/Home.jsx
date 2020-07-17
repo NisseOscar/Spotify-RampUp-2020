@@ -3,7 +3,15 @@ import React, { Component } from 'react';
 export default class Home extends Component {
     render() {
        return (
-          <h1>Welcome to filterfy!</h1>
+         <div>
+           <div id="login">
+               <h1>Tjeeeeeeenare Mannen</h1>
+            <span class="img-container">
+             <img src='public/images/ovesundberg.jpg' alt="Oveeee"></img>
+            </span>
+           </div>
+         </div>
+
        )
     }
 }
