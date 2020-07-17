@@ -1,10 +1,8 @@
 import time
 from flask import Flask, render_template, redirect, url_for
 from Frontend import app
-
-client_id = '7681ae26c9b64f25ad800adbdf03ea58'
-client_secret = '8818f30c74044db1811841d0f7823836'
-
+# Imports app details from a private file
+from details import client_id, client_secret
 
 @app.route('/time')
 def get_current_time():

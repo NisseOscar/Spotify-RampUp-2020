@@ -111,3 +111,6 @@ filterfy/node_modules
 # Enviroment
 
 pyEnv
+
+# Private files
+details.py
