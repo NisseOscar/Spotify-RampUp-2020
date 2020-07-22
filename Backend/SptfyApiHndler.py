@@ -104,8 +104,11 @@ class SptfyApiHndler:
 if __name__ == '__main__':
     fltr = SptfyApiHndler()
     word = 'winter'
-    clientID = '61ce90c9bfa841419ef3d34d439c3a42'
+
+    client_id = '7681ae26c9b64f25ad800adbdf03ea58'
     tkn = "BQCJaP4jNEP5RIPszVpwAWz6FRyHj4Lfr1LnMqjmeKz5dwUy26tgjoQaWVI2ZgYIGov8rvrmUzjv7ucZ7BY1bAIZd85K4pySKOSr4iokXC9tZqv3DQT0L-qBonNsaZ-xw8Jcbyq4GhfpT53rFfsMaFB5LYaV9ksUkZQ5u7EnfHwY59WPLQvyov_BuEW8i_-AmWDHokdd41eED9fG0tT3ISxlY89Fn73J0e73TwGx0ihsu_pumtqajglp4fU"
+
+
     playlsts = fltr.search(word,clientID, tkn)
     playlstsTracks = fltr.getPlaylstTracks(playlsts,clientID,tkn)
     trackProps = fltr.getTrackProperties(playlstsTracks,clientID,tkn)
