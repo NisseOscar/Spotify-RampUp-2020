@@ -1,17 +1,52 @@
 import React, { Component } from 'react';
+import Introduction from "./introduction.jsx";
+import Form from "./form.jsx"
+import Playlistbtn from "./playlistIcon.jsx"
 
 export default class Home extends Component {
-    render() {
-       return (
-         <div>
-           <div id="login">
-               <h1>Tjeeeeeeenare Mannen</h1>
-            <span class="img-container">
-             <img src='public/images/ovesundberg.jpg' alt="Oveeee"></img>
-            </span>
-           </div>
-         </div>
+  constructor(props) {
+    super(props);
+  }
 
-       )
-    }
+  togglePlaylist() {
+    console.log("click");
+  }
+  render() {
+   return (
+     <div className="cont">
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+      <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+        <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+        <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+        <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+        <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+        <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+        <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+        <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+          <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+          <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+          <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+          <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+          <Playlistbtn imageSrc="public/images/ovesundberg.jpg" imageName="Tjeeenare mannen"></Playlistbtn>
+    </div>
+   )
+ }
 }
