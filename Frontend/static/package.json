@@ -32,9 +32,13 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "balanced-match": "^1.0.0",
     "history": "^4.10.1",
+    "query-string": "^6.13.1",
     "react-router-dom": "^5.1.2",
+    "react-truncate": "^2.4.0",
     "react-typing-animation": "^1.6.2"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }

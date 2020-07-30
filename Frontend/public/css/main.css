@@ -5,6 +5,7 @@ h1 {
   font-size: 48;
 }
 
+
 h2{
   text-align: left;
   font-size: 14px;
@@ -19,10 +20,12 @@ h3{
 }
 h4{
   text-align: center;
-  font-size: 10px;
-  align-content: center;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  font-family: 'proxima_nova_rgbold';
 }
+
 
 body {
   background-color: #181818;
@@ -43,7 +46,7 @@ body {
 
 @media (min-device-width: 600px) {
 .cont {
-  width: 480px;
+  width: 600px;
   margin: auto;
   margin-top: 10%;
   }
@@ -51,6 +54,8 @@ body {
 
 img {
   border-radius: 50%;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
 
 input[type=text] {
@@ -69,25 +74,96 @@ input[type=text] {
 input:focus {
   outline:none;
 }
+::placeholder {
+  color: #cccccc;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #cccccc;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #cccccc;
+}
+
 
 .playlistButton {
-  width: 24%;
-  /* height: calc(width*1.62); */
+  width: 33.3%;
   border: none;
-  background-color: #797676;
+  background: #181818;
   font-family: "Courier New", Courier, monospace;
-  margin-left: 1%;
-  margin-top: 1%
+  margin-left: 0%;
+  margin-top: 0%;
+  position: relative;
+  text-align: center;
+  overflow:hidden;
+  block:inline;
 }
-@media (min-device-width: 600px) {
-  .playlistButton {
-    width: 120px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+.imagecont {
+  position:relative;
+  align-content: center;
+  width:96%;
+  height:0px;
+  padding-bottom: 96%;
+  overflow:hidden;
+  margin-top: 4%;
+  margin-left: 2%;
 }
-.playlistButton img {
-  width:80%;
-  margin-top: 10%;
-  margin-bot: 10%;
+.imagecont img{
+  position:absolute;
+  width:100%;
+  border-radius: 0%;
+  margin-left:-50%;
+}
+.playlistButton:hover {
+  background: #23b14dd1;
+  transition: all 0.4s
+}
+.playlistButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+.playlistButton.black {
+  background: #181818;
+}
+.playlistButton.green{
+  background: #23b14dd1;
+}
+
+
+.navbutton {
+  width: 80%;
+  border: 1px solid white !important;
+  outline:none;
+  padding: 5px 5px;
+  color: white;
+  margin-left: 10%;
+  margin-bottom: 30px;
+  background: #23b14d00;
+  border: white;
+  text-align: center;
+  transition: 0.8s;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.navbutton:active {
+  background: #23b14dd1;
+  transition: all 0.2s;
+}
+
+.navbutton:hover {
+  background: #23b14dd1;
+  transition: all 0.2s;
+}
+
+.navbutton:active:after {
+  background: #23b14d00;
+  transition: 0s;
 }

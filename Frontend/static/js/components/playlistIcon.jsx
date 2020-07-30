@@ -1,30 +1,36 @@
 import React, { Component } from 'react';
-
+import Truncate from 'react-truncate';
 
 class Playlistbtn extends Component {
   constructor(props) {
     super(props);
-    this.state = {active: false, background:"#797676"};
+    this.state = {active: false};
     this.imageSrc = props.imageSrc;
     this.imageName = props.imageName;
+    this.onClick = this.onClick.bind(this);
+    this.toggle = props.toggle;
+    this.id = props.id;
   }
 
   onClick(){
-    let toggle = !this.state.active
-    let newbackground = toggle ? "#797676":"#919191";
-    this.setState = { active:!toggle, background:newbackground};
-
-    console.log(this.state.active);
-    console.log(toggle)
+    this.setState({ active: !this.state.active});
+    this.toggle(this.id);
   }
 
+
   render(){
+    let btn_class = this.state.active ? "playlistButton green" : "playlistButton black";
+
     return (
-     <button className = "playlistButton" onClick={this.onClick.bind(this)}>
-       <img src={this.imageSrc} alt={this.imageName} style={{backgroundColor:this.state.background}}></img>
+     <button className = {btn_class} onClick={this.onClick.bind(this)}>
+       <div className="imagecont">
+        <img src={this.imageSrc} alt={this.imageName}></img>
+      </div>
        <h4>
          <br></br>
-         {this.imageName}
+       <Truncate trimWhitespace={true}>
+           {this.imageName}
+       </Truncate>
        </h4>
      </button>
     )
