@@ -13,7 +13,8 @@ export default class Home extends Component {
     let id = props.match.params.id;
     let query = queryString.parse(id)
     this.tkn = query.access_token;
-    this.state = {view: (<Introduction onClick={this.viewHandler} />), playlists:[]}
+    this.state = {view: (<Introduction onClick={this.viewHandler} />)};
+    this.playlists = [];
     this.viewID = 0;
   }
 
@@ -24,7 +25,7 @@ export default class Home extends Component {
           throw Error(response.statusText);
         }
         const json = await response.json();
-        this.setState({playlists: json.playlists})
+        this.playlists = json.playlists;
       }catch(error){
         this.state.view = <ErrorScreen/>
       }
@@ -39,15 +40,14 @@ export default class Home extends Component {
       else if(this.viewID==1){
         let value= document.getElementById("moodinput").value;
         if(value.length >0){
-          let activeView = <Playlists onClick={this.viewHandler} playlists={this.state.playlists}/>;
+          let activeView = <Playlists onClick={this.viewHandler} playlists={this.playlists}/>;
           this.setState({view:activeView})
           this.viewID++;
         }
       }
       else if(this.viewID==2){
-        let listActive = this.state.playlists.map(playlist => playlist.isActive);
-        console.log(listActive);
-        if(false){
+        let listActive = this.playlists.map(playlist => playlist.isActive);
+        if(listActive.some(item => item)){
           let activeView =<Loadingscreen/>;
           this.setState({view:activeView})
           this.viewID++;

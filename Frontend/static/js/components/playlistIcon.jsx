@@ -9,12 +9,12 @@ class Playlistbtn extends Component {
     this.imageName = props.imageName;
     this.onClick = this.onClick.bind(this);
     this.toggle = props.toggle;
-    this.id = props.id;
+    this.index = props.index;
   }
 
   onClick(){
     this.setState({ active: !this.state.active});
-    this.toggle(this.id);
+    this.toggle(this.index);
   }
 
 
