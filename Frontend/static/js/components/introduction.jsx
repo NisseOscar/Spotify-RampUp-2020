@@ -23,7 +23,7 @@ class Introduction extends Component {
            Well, let us help. Filterfy filters your playlist/playlists based on a mood, feeling or occation.
            <br></br>
            <br></br>
-           <Typing.Delay ms={500}></Typing.Delay>
+           <Typing.Delay ms={500}/>
            All you need to do is specify the mood and choose which playlists you want to pick songs from and then we do the rest.
            <br></br>
            <br></br>
@@ -32,7 +32,7 @@ class Introduction extends Component {
            <br></br>
            <br></br>
            <Typing.Delay ms={1000}></Typing.Delay>
-           <button className="navbutton">Got it!</button>
+           <button className="navbutton">{"Got it!"}</button>
         </Typing>
       </h2>)};
   }

@@ -167,3 +167,9 @@ input:focus {
   background: #23b14d00;
   transition: 0s;
 }
+
+.playlistPreview {
+  margin:10%;
+  width:80%;
+  height:350px;
+}
