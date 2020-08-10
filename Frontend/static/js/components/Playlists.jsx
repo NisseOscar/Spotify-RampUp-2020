@@ -14,7 +14,7 @@ class Playlists extends Component {
   }
 
   togglePlaylist(index){
-    this.playlists[index].isActive = !this.playlists[index].isActive
+    this.playlists[index].isActive = !this.playlists[index].isActive;
   }
 
   render(){
