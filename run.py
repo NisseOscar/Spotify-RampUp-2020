@@ -102,8 +102,10 @@ def login():
 def index():
     resp = make_response(render_template("index.html"))
     resp.set_cookie('same-site-cookie', 'foo', samesite=None, secure=True);
-    resp.set_cookie('cross-site-cookie', 'bar', domain='.spotify.com', samesite=None, secure=True);
-    resp.set_cookie('cross-site-cookie', 'bar', domain='.adjust.com', samesite=None, secure=True);
+    resp.set_cookie('cross-site-cookie', 'spotify', domain='.spotify.com', samesite=None, secure=True);
+    resp.set_cookie('cross-site-cookie', 'goadjust', domain='go.adjust.com', samesite=None, secure=True);
+    resp.set_cookie('cross-site-cookie', 'appadjust', domain='app.adjust.com', samesite=None, secure=True);
+    resp.set_cookie('cross-site-cookie', 'general', samesite=None, secure=True);
     # resp.headers.add('Set-Cookie','cross-site-cookie=bar; SameSite=None; Secure')
     return resp
     # return render_template("index.html")
