@@ -1,9 +1,8 @@
 import time
-from flask import Flask, render_template, redirect, url_for, jsonify, make_response
+from flask import Flask, render_template, redirect, url_for, jsonify, make_response, request
 from Frontend import app
 # Imports app details from a private file
 from details import client_id, client_secret
-from flask import request
 import requests
 from Backend.RequestError import RequestError
 
