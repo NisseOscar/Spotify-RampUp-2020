@@ -58,36 +58,6 @@ img {
   margin-bottom: 2%;
 }
 
-input[type=text] {
-  width: 80%;
-  height: 36px;
-  margin-left: 10%;
-  padding: 12px 20px;
-  /* border-color: #ffffff;
-  border: 5px; */
-  border: none;
-  background-color: #797676;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
-}
-input:focus {
-  outline:none;
-}
-::placeholder {
-  color: #cccccc;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: #cccccc;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
- color: #cccccc;
-}
-
-
 .playlistButton {
   width: 33.3%;
   border: none;
@@ -129,47 +99,4 @@ input:focus {
 }
 .playlistButton.green{
   background: #23b14dd1;
-}
-
-
-.navbutton {
-  width: 80%;
-  border: 1px solid white !important;
-  outline:none;
-  padding: 5px 5px;
-  color: white;
-  margin-left: 10%;
-  margin-bottom: 30px;
-  background: #23b14d00;
-  border: white;
-  text-align: center;
-  transition: 0.8s;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-appearance: none;
-  font-size: 16px;
-  text-align: center;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.navbutton:active {
-  background: #23b14dd1;
-  transition: all 0.2s;
-}
-
-.navbutton:hover {
-  background: #23b14dd1;
-  transition: all 0.2s;
-}
-
-.navbutton:active:after {
-  background: #23b14d00;
-  transition: 0s;
-}
-
-.playlistPreview {
-  margin:10%;
-  width:80%;
-  height:350px;
 }

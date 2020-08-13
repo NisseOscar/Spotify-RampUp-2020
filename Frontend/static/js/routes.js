@@ -4,8 +4,6 @@ import Home from './components/Home';
 // import more components
 export default (
     <HashRouter history={hashHistory}>
-     <div>
       <Route path='/:id' component={Home} />
-     </div>
     </HashRouter>
 );

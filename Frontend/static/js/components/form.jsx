@@ -12,16 +12,14 @@ class Form extends Component {
    render(){
      return (
        <div>
-           <h3>
-             What is the occation?
-             <br></br>
-             <br></br>
-           </h3>
-             <input id="moodinput" type="text" placeholder="Roadtrip, party, study etc.." maxLength="20">
-             </input>
-
+         <h3>
+           What is the occasion?
+           <br></br>
+           <br></br>
+         </h3>
+        <input id="moodinput" type="text" placeholder="Roadtrip, party, study etc.." maxLength="20"></input>
         <button className="navbutton" onClick={this.onClick}>Continue</button>
-        </div>
+      </div>
      )
    }
  }

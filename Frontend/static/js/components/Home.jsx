@@ -27,7 +27,7 @@ export default class Home extends Component {
           throw Error(response.statusText);
         }
         const json = await response.json();
-        if(json.ok){throw Error(json.message);}
+        if(!json.ok){throw Error(json.message);}
         this.playlists = json.playlists;
       }catch(error){
         this.setState({view: <ErrorScreen/>});
@@ -46,13 +46,16 @@ export default class Home extends Component {
         if(mood.length >0){
           this.setMood(mood)
         }
+        else{
+          this.setState({view:<Form onClick={this.viewHandler}/>});
+        }
       }
       else if(this.viewID==2){
         let selctdPlaylsts = this.playlists.filter(playlist => playlist.isActive);
         // this is total tracks to make sure the user does not make to large of an request, might implement later.
         let totTracks =  selctdPlaylsts.reduce((totTracks, playlist) => totTracks + playlist.tracks, 0);
         if(selctdPlaylsts.length>0){
-          let activeView =<Loadingscreen/>;
+          this.setState({view:<Loadingscreen/>});
           let selctdPlaylstsIDs = selctdPlaylsts.map(playlist => playlist.id);
           this.createPlaylist(selctdPlaylstsIDs)
         }
@@ -100,14 +103,11 @@ export default class Home extends Component {
         this.setState({view:(<Result onClick={this.viewHandler} href={res.newPlaylistID}/>)});
         this.viewID++;
       })
-      .catch(error => {this.setState({view:<ErrorScreen/>});});
+      .catch(error => {this.setState({view:<ErrorScreen/>}); console.log(error);});
   }
 
   render() {
-   return (
-     <div>
-       {this.state.view}
-    </div>
-   )
+   let view = this.state.view;
+   return view
  }
 }

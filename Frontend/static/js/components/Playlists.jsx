@@ -9,7 +9,7 @@ class Playlists extends Component {
     this.viewChange = props.onClick;
     this.togglePlaylist = this.togglePlaylist.bind(this);
     this.playlistsBtns = this.playlists.map((playlist,index) => (
-      <Playlistbtn key={playlist.id} index={index} toggle={this.togglePlaylist} imageSrc={playlist.image_ref} imageName={playlist.name}/>
+      <Playlistbtn key={playlist.id} index={index} toggle={this.togglePlaylist} imageSrc={playlist.image_url} imageName={playlist.name}/>
     ));
   }
 
@@ -20,12 +20,10 @@ class Playlists extends Component {
   render(){
     return (
       <div>
-      <div>
         <h3>
           Which playlists would you like to select songs from?
         </h3>
       <button className="navbutton" onClick={this.viewChange}>I'm done!</button>
-      </div>
       <div>
         {this.playlistsBtns}
       </div>

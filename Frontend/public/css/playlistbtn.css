@@ -1,0 +1,42 @@
+.playlistButton {
+  width: 33.3%;
+  border: none;
+  background: #181818;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 0%;
+  margin-top: 0%;
+  position: relative;
+  text-align: center;
+  overflow:hidden;
+  block:inline;
+}
+.imagecont {
+  position:relative;
+  align-content: center;
+  width:96%;
+  height:0px;
+  padding-bottom: 96%;
+  overflow:hidden;
+  margin-top: 4%;
+  margin-left: 2%;
+}
+.imagecont img{
+  position:absolute;
+  width:100%;
+  border-radius: 0%;
+  margin-left:-50%;
+}
+.playlistButton:hover {
+  background: #23b14dd1;
+  transition: all 0.4s
+}
+.playlistButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+.playlistButton.black {
+  background: #181818;
+}
+.playlistButton.green{
+  background: #23b14dd1;
+}

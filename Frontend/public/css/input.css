@@ -1,0 +1,28 @@
+input[type=text] {
+  width: 80%;
+  height: 36px;
+  margin-left: 10%;
+  padding: 12px 20px;
+  /* border-color: #ffffff;
+  border: 5px; */
+  border: none;
+  background-color: #797676;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+input:focus {
+  outline:none;
+}
+::placeholder {
+  color: #cccccc;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #cccccc;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #cccccc;
+}
